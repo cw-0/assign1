@@ -6,17 +6,20 @@ public class Problem2 {
   public static int PASSED_CASE_COUNT, FAILED_CASE_COUNT, RANDOM_CASE_COUNT = 0;
 
   public static void main(String[] args) {
+    testIntToString(-999999999, "-999999999");
     testIntToString(-34, "-34");
     testIntToString(-10, "-10");
     testIntToString(-2, "-2");
     testIntToString(-1, "-1");
-    testIntToString(0, "0");
-    testIntToString(000, "0");
+    testIntToString(-001, "-1");
     testIntToString(-0, "0");
+    testIntToString(0, "0");
+    testIntToString(001, "1");
     testIntToString(1, "1");
     testIntToString(2, "2");
     testIntToString(10, "10");
     testIntToString(34, "34");
+    testIntToString(999999999, "999999999");
     Random random = new Random();
     for (int i = 0; i < 10; i++) {
       testIntToString(random.nextInt(-999999, 999999), true);
