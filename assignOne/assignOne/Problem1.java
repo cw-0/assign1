@@ -14,28 +14,6 @@ public class Problem1 {
     testStrToInt("", 0);
     System.out.printf("PASSED: %d\n", Problem1.PASSED_CASES_COUNT);
     System.out.printf("FAILED: %d\n", Problem1.FAILED_CASES_COUNT);
-
-    if (stringToInt("-1429") != -1429) {
-      System.out.printf("Should equal -1429\n");
-    }
-    if (stringToInt("1") != 1) {
-      System.out.printf("Should equal 1\n");
-    }
-    if (stringToInt("0") != 0) {
-      System.out.printf("Should equal 0\n");
-    }
-    if (stringToInt("000") != 0) {
-      System.out.printf("Should equal 000\n");
-    }
-    if (stringToInt("0001230") != 1230) {
-      System.out.printf("Should equal 1230\n");
-    }
-    if (stringToInt("cat") != 0) {
-      System.out.printf("Should equal 0\n");
-    }
-    if (stringToInt("") != 0) {
-      System.out.printf("Should equal 0\n");
-    }
   }
 
   public static int stringToInt(String str) {
@@ -43,7 +21,7 @@ public class Problem1 {
     String newStr = "";
     int result = 0;
 
-    if (str.isEmpty()) {
+    if (str.length() < 1) {
       return 0;
     }
     if (str.charAt(0) == '-' || str.charAt(0) == '+') {
